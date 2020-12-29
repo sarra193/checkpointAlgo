@@ -1,0 +1,33 @@
+ALGORITHM string
+VAR
+      ch:=STRING;
+      nbrWord,nbrVowel,nbrChar:=INTEGER.
+BEGIN
+      write("write your sentence :");
+      read(ch);
+
+      /* The length of the sentence  */
+      write("The length of the sentence :" length(ch));
+
+
+      /* number of words in the sentence  */
+      nbrWord:=0;
+      FOR i FROM 0 TO length(ch)-1 STEP step  DO
+            IF (ch[i] = " ") THEN
+                  nbrWord=nbrWord+1;
+            END_IF
+      END_FOR
+      write("The number of words in the sentence is " nbrWord)
+
+
+/*  number of vowels in the sentence */
+
+      nbrVowel:=nbrVowel;
+      FOR i FROM 0 TO length(ch)-1 STEP step  DO
+            IF (ch[i] = 'a' or ch[i] = 'e' or ch[i] = 'i' or ch[i] = 'o' or ch[i] = 'u' or ch[i] = 'y' ) THEN
+                  nbrVowel=nbrVowel+1;
+            END_IF
+      END_FOR
+      write("The number of vowels in the sentence is" nbrVowel)
+
+END
